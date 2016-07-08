@@ -32,5 +32,19 @@ namespace WordCounter.Objects
       Assert.Equal(expectedResult, result);
     }
 
+    [Fact]
+    public void CountRepeats_aA_1()
+    {
+      // Arrange
+      int expectedResult = 1;
+      RepeatCounter testCounter = new RepeatCounter();
+
+      // Act
+      int result = testCounter.CountRepeats("a", "A");
+
+      // Assert
+      Assert.Equal(expectedResult, result);
+    }
+
   }
 }

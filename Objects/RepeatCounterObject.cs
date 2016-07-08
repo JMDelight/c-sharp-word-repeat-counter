@@ -8,6 +8,7 @@ namespace WordCounter.Objects
     {
       int count = 0;
       sentence = sentence.ToLower();
+      word = word.ToLower();
       if (sentence == word)
       {
         count ++;
