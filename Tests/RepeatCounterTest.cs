@@ -74,5 +74,19 @@ namespace WordCounter.Objects
       Assert.Equal(expectedResult, result);
     }
 
+    [Fact]
+    public void CountRepeats_aDoga_1()
+    {
+      // Arrange
+      int expectedResult = 1;
+      RepeatCounter testCounter = new RepeatCounter();
+
+      // Act
+      int result = testCounter.CountRepeats("a dog", "a");
+
+      // Assert
+      Assert.Equal(expectedResult, result);
+    }
+
   }
 }

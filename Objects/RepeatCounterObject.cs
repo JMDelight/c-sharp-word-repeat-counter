@@ -1,3 +1,4 @@
+using System;
 
 namespace WordCounter.Objects
 {
@@ -9,11 +10,15 @@ namespace WordCounter.Objects
     {
       int count = 0;
       sentence = sentence.ToLower();
-      sentence = sentence.Trim();
+      string[] sentenceWords = sentence.Split(new[]{" "}, StringSplitOptions.RemoveEmptyEntries);
       word = word.ToLower();
-      if (sentence == word)
+      word = word.Trim();
+      foreach (string checkedWord in sentenceWords)
       {
-        count ++;
+        if (checkedWord == word)
+        {
+          count ++;
+        }
       }
       return count;
     }
