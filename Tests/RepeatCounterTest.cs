@@ -9,10 +9,10 @@ namespace WordCounter.Objects
     {
       // Arrange
       int expectedResult = 1;
-      RepeatCounter testCounter = new RepeatCounter();
+      RepeatCounter testCounter = new RepeatCounter("a", "a");
 
       // Act
-      int result = testCounter.CountRepeats("a", "a");
+      int result = testCounter.CountRepeats();
 
       // Assert
       Assert.Equal(expectedResult, result);
@@ -23,10 +23,10 @@ namespace WordCounter.Objects
     {
       // Arrange
       int expectedResult = 1;
-      RepeatCounter testCounter = new RepeatCounter();
+      RepeatCounter testCounter = new RepeatCounter("A", "a");
 
       // Act
-      int result = testCounter.CountRepeats("A", "a");
+      int result = testCounter.CountRepeats();
 
       // Assert
       Assert.Equal(expectedResult, result);
@@ -37,10 +37,10 @@ namespace WordCounter.Objects
     {
       // Arrange
       int expectedResult = 1;
-      RepeatCounter testCounter = new RepeatCounter();
+      RepeatCounter testCounter = new RepeatCounter("a", "A");
 
       // Act
-      int result = testCounter.CountRepeats("a", "A");
+      int result = testCounter.CountRepeats();
 
       // Assert
       Assert.Equal(expectedResult, result);
@@ -51,10 +51,10 @@ namespace WordCounter.Objects
     {
       // Arrange
       int expectedResult = 0;
-      RepeatCounter testCounter = new RepeatCounter();
+      RepeatCounter testCounter = new RepeatCounter("cat", "a");
 
       // Act
-      int result = testCounter.CountRepeats("cat", "a");
+      int result = testCounter.CountRepeats();
 
       // Assert
       Assert.Equal(expectedResult, result);
@@ -65,10 +65,10 @@ namespace WordCounter.Objects
     {
       // Arrange
       int expectedResult = 1;
-      RepeatCounter testCounter = new RepeatCounter();
+      RepeatCounter testCounter = new RepeatCounter(" a ", "a");
 
       // Act
-      int result = testCounter.CountRepeats(" a ", "a");
+      int result = testCounter.CountRepeats();
 
       // Assert
       Assert.Equal(expectedResult, result);
@@ -79,10 +79,10 @@ namespace WordCounter.Objects
     {
       // Arrange
       int expectedResult = 1;
-      RepeatCounter testCounter = new RepeatCounter();
+      RepeatCounter testCounter = new RepeatCounter("a dog", "a");
 
       // Act
-      int result = testCounter.CountRepeats("a dog", "a");
+      int result = testCounter.CountRepeats();
 
       // Assert
       Assert.Equal(expectedResult, result);
@@ -93,49 +93,52 @@ namespace WordCounter.Objects
     {
       // Arrange
       int expectedResult = 2;
-      RepeatCounter testCounter = new RepeatCounter();
+      RepeatCounter testCounter = new RepeatCounter("the cat is the best", "the");
 
       // Act
-      int result = testCounter.CountRepeats("the cat is the best", "the");
+      int result = testCounter.CountRepeats();
 
       // Assert
       Assert.Equal(expectedResult, result);
     }
+
     [Fact]
     public void CountRepeats_catCommacat_1()
     {
       // Arrange
       int expectedResult = 1;
-      RepeatCounter testCounter = new RepeatCounter();
+      RepeatCounter testCounter = new RepeatCounter("cat,", "cat");
 
       // Act
-      int result = testCounter.CountRepeats("cat,", "cat");
+      int result = testCounter.CountRepeats();
 
       // Assert
       Assert.Equal(expectedResult, result);
     }
+
     [Fact]
     public void CountRepeats_fullSentenceWithAllBehaviorsthe_2()
     {
       // Arrange
       int expectedResult = 2;
-      RepeatCounter testCounter = new RepeatCounter();
+      RepeatCounter testCounter = new RepeatCounter("The, cat is the best of these,", "the");
 
       // Act
-      int result = testCounter.CountRepeats("The, cat is the best of these,", "the");
+      int result = testCounter.CountRepeats();
 
       // Assert
       Assert.Equal(expectedResult, result);
     }
+
     [Fact]
     public void CountRepeats_fullSentenceWithAllBehaviorscapitalThe_2()
     {
       // Arrange
       int expectedResult = 2;
-      RepeatCounter testCounter = new RepeatCounter();
+      RepeatCounter testCounter = new RepeatCounter("The, cat is the best of these,", "The");
 
       // Act
-      int result = testCounter.CountRepeats("The, cat is the best of these,", "The");
+      int result = testCounter.CountRepeats();
 
       // Assert
       Assert.Equal(expectedResult, result);
