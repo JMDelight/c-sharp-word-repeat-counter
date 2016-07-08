@@ -101,6 +101,19 @@ namespace WordCounter.Objects
       // Assert
       Assert.Equal(expectedResult, result);
     }
+    [Fact]
+    public void CountRepeats_catCommacat_1()
+    {
+      // Arrange
+      int expectedResult = 1;
+      RepeatCounter testCounter = new RepeatCounter();
+
+      // Act
+      int result = testCounter.CountRepeats("cat,", "cat");
+
+      // Assert
+      Assert.Equal(expectedResult, result);
+    }
 
   }
 }

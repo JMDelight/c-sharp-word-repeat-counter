@@ -10,11 +10,13 @@ namespace WordCounter.Objects
     {
       int count = 0;
       sentence = sentence.ToLower();
-      string[] sentenceWords = sentence.Split(new[]{" "}, StringSplitOptions.RemoveEmptyEntries);
+      string[] delimiters = new [] {" ", ",", ".", "!", "?", "\""};
+      string[] sentenceWords = sentence.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
       word = word.ToLower();
       word = word.Trim();
       foreach (string checkedWord in sentenceWords)
       {
+        // System.Console.WriteLine(checkedWord);
         if (checkedWord == word)
         {
           count ++;
