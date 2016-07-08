@@ -88,5 +88,19 @@ namespace WordCounter.Objects
       Assert.Equal(expectedResult, result);
     }
 
+    [Fact]
+    public void CountRepeats_theCatIsTheBestthe_1()
+    {
+      // Arrange
+      int expectedResult = 2;
+      RepeatCounter testCounter = new RepeatCounter();
+
+      // Act
+      int result = testCounter.CountRepeats("the cat is the best", "the");
+
+      // Assert
+      Assert.Equal(expectedResult, result);
+    }
+
   }
 }
