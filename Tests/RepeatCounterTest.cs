@@ -114,6 +114,32 @@ namespace WordCounter.Objects
       // Assert
       Assert.Equal(expectedResult, result);
     }
+    [Fact]
+    public void CountRepeats_fullSentenceWithAllBehaviorsthe_2()
+    {
+      // Arrange
+      int expectedResult = 2;
+      RepeatCounter testCounter = new RepeatCounter();
+
+      // Act
+      int result = testCounter.CountRepeats("The, cat is the best of these,", "the");
+
+      // Assert
+      Assert.Equal(expectedResult, result);
+    }
+    [Fact]
+    public void CountRepeats_fullSentenceWithAllBehaviorscapitalThe_2()
+    {
+      // Arrange
+      int expectedResult = 2;
+      RepeatCounter testCounter = new RepeatCounter();
+
+      // Act
+      int result = testCounter.CountRepeats("The, cat is the best of these,", "The");
+
+      // Assert
+      Assert.Equal(expectedResult, result);
+    }
 
   }
 }

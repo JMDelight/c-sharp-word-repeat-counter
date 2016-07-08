@@ -27,7 +27,7 @@ _If you have any questions or concerns, please email me at thefencingflutist@gma
 ## BDD specs used in creating this project
 
 Behavior | Input String | Input Word | Expected Output | Reason for choice of Input
---- | --- | --- | ---
+--- | --- | --- | --- | ---
 Detect when input string matches input word | "a" | "a" | 1 | Only a simple word was needed.
 Handle match with capitalization on string | A | a | 1 | Only a simple word is needed.
 Handle match with capitalization on input | a | A | 1 | Only a simple word is needed.
