@@ -143,6 +143,5 @@ namespace WordCounter.Objects
       // Assert
       Assert.Equal(expectedResult, result);
     }
-
   }
 }

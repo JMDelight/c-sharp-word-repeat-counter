@@ -7,7 +7,6 @@ namespace WordCounter.Objects
     private string _userSentence;
     private string _wordToCheck;
 
-
     public RepeatCounter(string userSentence, string wordToCheck)
     {
       _userSentence = userSentence;
