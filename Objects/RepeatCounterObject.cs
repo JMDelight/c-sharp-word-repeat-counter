@@ -9,6 +9,7 @@ namespace WordCounter.Objects
     {
       int count = 0;
       sentence = sentence.ToLower();
+      sentence = sentence.Trim();
       word = word.ToLower();
       if (sentence == word)
       {
